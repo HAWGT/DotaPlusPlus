@@ -112,6 +112,8 @@
             this.chk_tome = new System.Windows.Forms.CheckBox();
             this.tb_sahotkey = new System.Windows.Forms.TextBox();
             this.lbl_sa = new System.Windows.Forms.Label();
+            this.chk_drowaura = new System.Windows.Forms.CheckBox();
+            this.chk_buckler = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.num_random)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_time)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_actwait)).BeginInit();
@@ -558,9 +560,7 @@
             // chk_selecthero
             // 
             this.chk_selecthero.AutoSize = true;
-            this.chk_selecthero.Checked = true;
-            this.chk_selecthero.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chk_selecthero.Location = new System.Drawing.Point(1004, 437);
+            this.chk_selecthero.Location = new System.Drawing.Point(1004, 415);
             this.chk_selecthero.Name = "chk_selecthero";
             this.chk_selecthero.Size = new System.Drawing.Size(159, 18);
             this.chk_selecthero.TabIndex = 67;
@@ -570,9 +570,7 @@
             // chk_stunbreakult
             // 
             this.chk_stunbreakult.AutoSize = true;
-            this.chk_stunbreakult.Checked = true;
-            this.chk_stunbreakult.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chk_stunbreakult.Location = new System.Drawing.Point(1004, 461);
+            this.chk_stunbreakult.Location = new System.Drawing.Point(1004, 439);
             this.chk_stunbreakult.Name = "chk_stunbreakult";
             this.chk_stunbreakult.Size = new System.Drawing.Size(194, 32);
             this.chk_stunbreakult.TabIndex = 69;
@@ -582,9 +580,7 @@
             // chk_amaghs
             // 
             this.chk_amaghs.AutoSize = true;
-            this.chk_amaghs.Checked = true;
-            this.chk_amaghs.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chk_amaghs.Location = new System.Drawing.Point(1004, 499);
+            this.chk_amaghs.Location = new System.Drawing.Point(1004, 472);
             this.chk_amaghs.Name = "chk_amaghs";
             this.chk_amaghs.Size = new System.Drawing.Size(171, 32);
             this.chk_amaghs.TabIndex = 70;
@@ -1036,12 +1032,34 @@
             this.lbl_sa.TabIndex = 112;
             this.lbl_sa.Text = "Shadow Amulet Hotkey";
             // 
+            // chk_drowaura
+            // 
+            this.chk_drowaura.AutoSize = true;
+            this.chk_drowaura.Location = new System.Drawing.Point(1004, 511);
+            this.chk_drowaura.Name = "chk_drowaura";
+            this.chk_drowaura.Size = new System.Drawing.Size(105, 18);
+            this.chk_drowaura.TabIndex = 114;
+            this.chk_drowaura.Text = "Auto Drow Aura";
+            this.chk_drowaura.UseVisualStyleBackColor = true;
+            // 
+            // chk_buckler
+            // 
+            this.chk_buckler.AutoSize = true;
+            this.chk_buckler.Location = new System.Drawing.Point(1004, 536);
+            this.chk_buckler.Name = "chk_buckler";
+            this.chk_buckler.Size = new System.Drawing.Size(110, 18);
+            this.chk_buckler.TabIndex = 115;
+            this.chk_buckler.Text = "Auto Use Buckler";
+            this.chk_buckler.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Indigo;
-            this.ClientSize = new System.Drawing.Size(1258, 549);
+            this.ClientSize = new System.Drawing.Size(1258, 584);
+            this.Controls.Add(this.chk_buckler);
+            this.Controls.Add(this.chk_drowaura);
             this.Controls.Add(this.tb_sahotkey);
             this.Controls.Add(this.lbl_sa);
             this.Controls.Add(this.chk_tome);
@@ -1228,6 +1246,8 @@
         private System.Windows.Forms.CheckBox chk_tome;
         private System.Windows.Forms.TextBox tb_sahotkey;
         private System.Windows.Forms.Label lbl_sa;
+        private System.Windows.Forms.CheckBox chk_drowaura;
+        private System.Windows.Forms.CheckBox chk_buckler;
     }
 }
 

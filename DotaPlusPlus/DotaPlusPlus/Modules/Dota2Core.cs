@@ -138,6 +138,16 @@ namespace DotaPlusPlus.Modules
                             canAeonDiskTrigger = true;
                         }
                     }*/
+                    //DROW AURA
+                    if (mainForm.DrowAura() && gs.Hero.Name == "npc_dota_hero_drow_ranger")
+                    {
+                        ActionExecuter.ExecuteAbility("E", "", mainForm.QuickCast(), this, true);
+                    }
+
+                    if (mainForm.Buckler())
+                    {
+                        ActionExecuter.ExecuteItem("item_buckler", "", mainForm.QuickCast(), this, true);
+                    }
                     //LINKENS AND AM AGHS
                     if (((mainForm.AmAghs() && gs.Hero.Name == "npc_dota_hero_antimage" && items.InventoryContains("item_ultimate_scepter")) || items.InventoryContains("item_sphere")) && mainForm.Linkens())
                     {

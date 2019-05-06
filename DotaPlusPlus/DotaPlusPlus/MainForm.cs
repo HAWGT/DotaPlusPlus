@@ -90,6 +90,16 @@ namespace DotaPlusPlus
             return chk_amaghs.Checked;
         }
 
+        public bool DrowAura()
+        {
+            return chk_drowaura.Checked;
+        }
+
+        public bool Buckler()
+        {
+            return chk_buckler.Checked;
+        }
+
         public bool Silenced()
         {
             return chk_silenced.Checked;
