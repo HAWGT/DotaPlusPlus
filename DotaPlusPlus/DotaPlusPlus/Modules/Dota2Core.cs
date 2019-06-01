@@ -22,6 +22,8 @@ namespace DotaPlusPlus.Modules
         public MainForm mainForm;
         private Thread workThread;
 
+        private GameState gs_dump;
+
         private Dota2GSI.Nodes.Abilities abilities;
         private Dota2GSI.Nodes.Items items;
         private int clockTime = 0;
@@ -79,13 +81,7 @@ namespace DotaPlusPlus.Modules
         private void OnNewGameState(GameState gs)
         {
 
-            /*try
-            {
-                File.WriteAllText("C:\\Users\\Migfe\\Desktop\\state.json",gs.ToString());
-            } catch
-            {
-
-            }*/
+            gs_dump = gs;
 
             if (gs.IsSpectator)
             {
@@ -195,6 +191,18 @@ namespace DotaPlusPlus.Modules
                 }
             }
         }
+
+        public void DumpGS()
+        {
+            try
+            {
+                File.WriteAllText(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\gs_dump." + (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds + ".json", gs_dump.ToString());
+            } catch
+            {
+
+            }
+        }
+
 
         private void CreateGsifile()
         {
@@ -523,6 +531,15 @@ namespace DotaPlusPlus.Modules
                         int time = 200;
                         if (mainForm.WaitRandom()) time += rnd.Next(1, mainForm.WaitRandomTime());
                         ActionExecuter.ExecuteItem("item_shadow_amulet", "SELF", mainForm.QuickCast(), this, false);
+                        Thread.Sleep(time);
+                    }
+
+                    if (mainForm.Phase() && (KBMHelper.GetAsyncKeyState(0x2) < 0 || KBMHelper.GetAsyncKeyState(0x41) < 0 || KBMHelper.GetAsyncKeyState(0x4D) < 0))
+                    {
+                        Random rnd = new Random();
+                        int time = 200;
+                        if (mainForm.WaitRandom()) time += rnd.Next(1, mainForm.WaitRandomTime());
+                        ActionExecuter.ExecuteItem("item_phase_boots", null, mainForm.QuickCast(), this, true);
                         Thread.Sleep(time);
                     }
 

@@ -100,6 +100,11 @@ namespace DotaPlusPlus
             return chk_buckler.Checked;
         }
 
+        public bool Phase()
+        {
+            return chk_phase.Checked;
+        }
+
         public bool Silenced()
         {
             return chk_silenced.Checked;
@@ -389,6 +394,11 @@ namespace DotaPlusPlus
         private void btn_disabledclear_Click(object sender, EventArgs e)
         {
             lb_disabled.Items.Clear();
+        }
+
+        private void btn_dumpgs_Click(object sender, EventArgs e)
+        {
+            dota2core.DumpGS();
         }
     }
 }

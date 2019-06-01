@@ -114,6 +114,8 @@
             this.lbl_sa = new System.Windows.Forms.Label();
             this.chk_drowaura = new System.Windows.Forms.CheckBox();
             this.chk_buckler = new System.Windows.Forms.CheckBox();
+            this.btn_dumpgs = new System.Windows.Forms.Button();
+            this.chk_phase = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.num_random)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_time)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_actwait)).BeginInit();
@@ -1052,12 +1054,35 @@
             this.chk_buckler.Text = "Auto Use Buckler";
             this.chk_buckler.UseVisualStyleBackColor = true;
             // 
+            // btn_dumpgs
+            // 
+            this.btn_dumpgs.ForeColor = System.Drawing.Color.Black;
+            this.btn_dumpgs.Location = new System.Drawing.Point(585, 574);
+            this.btn_dumpgs.Name = "btn_dumpgs";
+            this.btn_dumpgs.Size = new System.Drawing.Size(75, 23);
+            this.btn_dumpgs.TabIndex = 116;
+            this.btn_dumpgs.Text = "DUMP GS";
+            this.btn_dumpgs.UseVisualStyleBackColor = true;
+            this.btn_dumpgs.Click += new System.EventHandler(this.btn_dumpgs_Click);
+            // 
+            // chk_phase
+            // 
+            this.chk_phase.AutoSize = true;
+            this.chk_phase.Location = new System.Drawing.Point(1004, 561);
+            this.chk_phase.Name = "chk_phase";
+            this.chk_phase.Size = new System.Drawing.Size(245, 18);
+            this.chk_phase.TabIndex = 117;
+            this.chk_phase.Text = "Attacking or Moving will activate Phase Boots";
+            this.chk_phase.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Indigo;
-            this.ClientSize = new System.Drawing.Size(1258, 584);
+            this.ClientSize = new System.Drawing.Size(1267, 609);
+            this.Controls.Add(this.chk_phase);
+            this.Controls.Add(this.btn_dumpgs);
             this.Controls.Add(this.chk_buckler);
             this.Controls.Add(this.chk_drowaura);
             this.Controls.Add(this.tb_sahotkey);
@@ -1248,6 +1273,8 @@
         private System.Windows.Forms.Label lbl_sa;
         private System.Windows.Forms.CheckBox chk_drowaura;
         private System.Windows.Forms.CheckBox chk_buckler;
+        private System.Windows.Forms.Button btn_dumpgs;
+        private System.Windows.Forms.CheckBox chk_phase;
     }
 }
 
